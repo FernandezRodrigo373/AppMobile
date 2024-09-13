@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  public mi_color:string;
+
+  constructor() {
+    this.mi_color = "";
+  }
+
+  CambiarColor(color: string){
+
+    this.mi_color = color;
+  }
 
 }

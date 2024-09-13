@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyApp.SplashScreen" parent="Theme.SplashScreen">
+        <!-- Cambiar el fondo del splash screen -->
+        <item name="android:windowSplashScreenBackground">@color/black</item>
+        
+        <!-- Definir el logo animado o estático -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash</item>
+
+        <!-- Duración de la animación (si usas una animación) -->
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        
+        <item name="android:windowSplashScreenBrandingImage">@drawable/division</item>
+
+
+   
+        <!-- Tema que se aplica después de que desaparezca el splash screen -->
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+    </style>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+</resources>

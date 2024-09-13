@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>!Hola!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Bienvenido a nuestra aplicación.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón de Cerrar sesión -->
+  <div style="text-align: center; margin-top: 20px;">
+    <ion-button (click)="logout()" color="danger">
+      Cerrar sesión
+    </ion-button>
+  </div>
+
+</ion-content>

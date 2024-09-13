@@ -1,0 +1,43 @@
+<app-header title="Login"></app-header>
+
+<ion-content style="--background: #FBD7B9;">
+
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 70vh; padding: 20px; box-sizing: border-box;">
+
+    <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit()" style="width: 100%; max-width: 400px;">
+
+      <app-custom-input autocomplete="email" icon="mail-outline" [control]="form.controls.correo" type="email" label="Correo" style="background: #98FF98; width: 100%;"></app-custom-input>
+
+      <div class="validators" *ngIf="form.controls.correo.errors && form.controls.correo.touched">
+        <!-- Mensajes de error -->
+      </div>
+
+      <app-custom-input icon="mail-outline" [control]="form.controls.clave" type="password" label="Clave" style="margin-top: 10%; width: 100%;">
+        <div *ngIf="form.controls.clave.errors?.['required']">
+          Escriba su clave
+        </div>
+        <div *ngIf="form.controls.clave.errors?.['clave']">
+          La clave no es válida
+        </div>
+      </app-custom-input>
+
+      <ion-button color="primary" expand="block" mode="ios" type="submit" class="submit" [disabled]="form.invalid" style="margin-top: 20px;">
+        Ingresar
+      </ion-button>
+
+    </form>
+
+    <!-- Botones para llenar datos predefinidos -->
+    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+
+      <ion-button (click)="setUser('camila@gmail.com', '123456')">Llenar Camila</ion-button>
+      <ion-button (click)="setUser('maxi@hotmail.com', '654321')">Llenar Maxi</ion-button>
+      <ion-button (click)="setUser('rodrigo@gmail.com', '123456')">Llenar Rodrigo</ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>
+
+
